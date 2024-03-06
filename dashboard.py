@@ -1,9 +1,16 @@
 ## start code
-import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+import streamlit as st
+
+# Load data dari csv
+# all_df = pd.read_csv("all_data.csv")
+url='https://drive.google.com/file/d/11KgQnFSKxX1tir2p6l6HBhsRkFw9QkMV/view?usp=sharing'
+url='https://drive.google.com/uc?id=' + url.split('/')[-2]
+all_df = pd.read_csv(url)
+
 
 
 #buat function helper
@@ -23,7 +30,7 @@ def create_state_customer_df(df, n=15):
     return by_customer_state_df.sort_values(by="customer_count", ascending=False).head(n)
 
 # Load all data CSV
-all_df = pd.read_csv("all_data.csv")
+# all_df = pd.read_csv("all_data.csv")
 
 # Create helper functions
 sum_order_items_df = create_sum_order_items_df(all_df)
