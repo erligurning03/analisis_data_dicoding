@@ -1,5 +1,5 @@
-import streamlit
-import pandas 
-import matplotlib
-import seaborn 
-import numpy 
+streamlit
+pandas 
+matplotlib
+seaborn 
+numpy 
